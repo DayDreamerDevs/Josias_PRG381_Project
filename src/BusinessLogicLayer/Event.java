@@ -123,4 +123,6 @@ public class Event {
         this.confirmedAns = confirmedAns;
         this.confirmedDateTime = confirmedDateTime;
     }
+    public Event(String sourceLine) {
+    }
 }

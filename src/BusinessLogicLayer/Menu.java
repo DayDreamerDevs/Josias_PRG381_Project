@@ -54,4 +54,6 @@ public class Menu {
         this.coldDrinks = coldDrinks;
         this.desert = desert;
     }
+    public Menu(String sourceLine) {
+    }
 }

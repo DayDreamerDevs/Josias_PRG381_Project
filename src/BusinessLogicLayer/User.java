@@ -85,5 +85,7 @@ public class User {
         this.email = email;
         this.nationalID = nationalID;
     }
+    public User(String sourceLine) {
+    }
     
 }

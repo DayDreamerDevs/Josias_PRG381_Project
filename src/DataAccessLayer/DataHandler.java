@@ -9,43 +9,43 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import BusinessLogicLayer.Event;
+import BusinessLogicLayer.Menu;
+import BusinessLogicLayer.User;
+
 public class DataHandler {
     public String sourceFile = null;
     public String sourceLine = null;
 
-    public List<String> readText(int index) throws IOException{
+    public List readText(int index) throws IOException{
         BufferedReader reader = new BufferedReader(new FileReader(new File(sourceFile)));
-        List<String> clientList = new ArrayList<String>();
-        List<String> eventList = new ArrayList<String>();
-        List<String> menuList = new ArrayList<String>();
+        List<User> clientList = new ArrayList<User>();
+        List<Event> eventList = new ArrayList<Event>();
+        List<Menu> menuList = new ArrayList<Menu>();
 
         switch (index) {
             case 0:
                 sourceFile = "client.txt";
                 while ((sourceLine = reader.readLine()) != null) {
-                    clientList.add(sourceLine);
+                    clientList.add(new User(sourceLine));
                 }
                 reader.close();
                 return clientList;
             case 1:
                 sourceFile = "event.txt";
                 while ((sourceLine = reader.readLine()) != null) {
-                    eventList.add(sourceLine);
+                    eventList.add(new Event(sourceLine));
                 }
                 reader.close();
                 return eventList;
             case 2:
                 sourceFile = "menu.txt";
                 while ((sourceLine = reader.readLine()) != null) {
-                    menuList.add(sourceLine);
+                    menuList.add(new Menu(sourceLine));
                 }
                 reader.close();
                 return menuList;
             default:
-                sourceFile = "event.txt";
-                while ((sourceLine = reader.readLine()) != null) {
-                    eventList.add(sourceLine);
-                }
                 reader.close();
                 break;
             }
