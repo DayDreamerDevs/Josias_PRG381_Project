@@ -11,5 +11,15 @@ public class Login {
 
         System.out.println("Enter your Password");
         String password = sc.nextLine();
+
+        boolean isOwner = false;
+        if (isOwner == false) {
+            Menu menu = new Menu();
+            menu.menuScreen();
+        }else{
+            OwnerMenu ownerMenu = new OwnerMenu();
+            ownerMenu.ownerMenuScreen();
+        }
+        
     }
 }
