@@ -15,16 +15,17 @@ public class BaptismEvent extends EventType{
         //EventID generation
         Random random = new Random();
 
-        char a = (char) ('a' + random.nextInt(26));
-        char b = (char) ('a' + random.nextInt(26));
+        char char1 = (char) ('a' + random.nextInt(26));
+        char char2 = (char) ('a' + random.nextInt(26));
 
         int random_int1 = random.nextInt(9);
         int random_int2 = random.nextInt(9);
         int random_int3 = random.nextInt(9);
 
-        String eventID = new StringBuilder().append(a + b + random_int1 + random_int2 + random_int3).toString();
+       //Getting input and setting values
+        String eventID = new StringBuilder().append("b" + char1 + char2 + random_int1 + random_int2 + random_int3).toString();
         event.setEventID(eventID);
-        //Getting input and setting values
+
         System.out.println("What is the Event Date and Time of the Event?");
         event.setDateTime(sc.nextLine());
         
@@ -58,7 +59,7 @@ public class BaptismEvent extends EventType{
 
     @Override
     public void eventTotal(int adultNum, int childNum, boolean confirmedEarly) {
-        
+        //add Menu Selection
     }
     
 }
