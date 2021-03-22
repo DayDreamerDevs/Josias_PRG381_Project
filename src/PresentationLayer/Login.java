@@ -1,9 +1,10 @@
 package PresentationLayer;
 
+import java.io.IOException;
 import java.util.*;
 
 public class Login {
-    public void loginScreen(){
+    public void loginScreen() throws IOException{
         Scanner sc = new Scanner(System.in);
         
         System.out.println("Enter your Username");
