@@ -9,8 +9,10 @@ public class BaptismEvent extends EventType{
     public void getEventDetails() {
         //generate eventID
         //eventType and ClientID must be given too method
+        Event event = new Event();
+
         System.out.println("What is the Event Date and Time of the Event?");
-        
+        event.setDateTime(sc.nextLine());
         
         /*Owner owner = new Owner();
         owner.setAge(30);*/
