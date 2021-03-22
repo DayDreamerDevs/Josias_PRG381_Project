@@ -1,13 +1,13 @@
 package BusinessLogicLayer;
 
-import java.sql.Date;
+import java.sql.*;
 
 public class Event {
     private String eventID;
     private String clientID;
     private String menuID;
     private int type;
-    private Date dateTime;
+    private String dateTime;
     private String address;
     private int totalPeople;
     private int adultNum;
@@ -16,7 +16,7 @@ public class Event {
     private String decorationDesc;
     private double totalCost;
     private boolean confirmedAns;
-    private Date confirmedDateTime;
+    private String confirmedDateTime;
     
     public String getEventID() {
         return eventID;
@@ -42,10 +42,10 @@ public class Event {
     public void setType(int type) {
         this.type = type;
     }
-    public Date getDateTime() {
+    public String getDateTime() {
         return dateTime;
     }
-    public void setDateTime(Date dateTime) {
+    public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
     }
     public String getAddress() {
@@ -96,20 +96,20 @@ public class Event {
     public void setConfirmedAns(boolean confirmedAns) {
         this.confirmedAns = confirmedAns;
     }
-    public Date getConfirmedDateTime() {
+    public String getConfirmedDateTime() {
         return confirmedDateTime;
     }
-    public void setConfirmedDateTime(Date confirmedDateTime) {
+    public void setConfirmedDateTime(String confirmedDateTime) {
         this.confirmedDateTime = confirmedDateTime;
     }
 
     public Event() {
 
     }
-    
-    public Event(String eventID, String clientID, String menuID, int type, Date dateTime, String address,
+
+    public Event(String eventID, String clientID, String menuID, int type, String dateTime, String address,
             int totalPeople, int adultNum, int childNum, boolean decorationAns, String decorationDesc, double totalCost,
-            boolean confirmedAns, Date confirmedDateTime) {
+            boolean confirmedAns, String confirmedDateTime) {
         this.eventID = eventID;
         this.clientID = clientID;
         this.menuID = menuID;
