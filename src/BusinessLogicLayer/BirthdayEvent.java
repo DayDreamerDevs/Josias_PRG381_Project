@@ -54,6 +54,7 @@ public class BirthdayEvent extends EventType{
         eventRate = 1000.00;
         adultRate = 0.00;
         childRate = 0.00;
+        int counter = 0;
 
         Menu menu = new Menu();
 
@@ -70,20 +71,74 @@ public class BirthdayEvent extends EventType{
         String eventID = new StringBuilder().append("me" + char1 + char2 + random_int1 + random_int2 + random_int3).toString();
         menu.setMenuID(eventID);
 
-        System.out.println("Do you want an Adult Menu?");
+        System.out.println("Do you want an Adult Menu True/False?");
         menu.setAdult(sc.nextBoolean());
+        if (sc.nextBoolean() == true) {
+            counter++;
+        }
 
-        System.out.println("Do you want an Kids Menu?");
+        System.out.println("Do you want an Kids Menu True/False?");
         menu.setKids(sc.nextBoolean());
+        if (sc.nextBoolean() == true) {
+            counter++;
+        }
 
-        System.out.println("Do you want an Warm Drinks Menu?");
+        System.out.println("Do you want an Warm Drinks Menu True/False?");
         menu.setWarmsDrinks(sc.nextBoolean());
+        if (sc.nextBoolean() == true) {
+            counter++;
+        }
 
-        System.out.println("Do you want an Cold Drinks Menu?");
+        System.out.println("Do you want an Cold Drinks Menu? True/False");
         menu.setColdDrinks(sc.nextBoolean());
+        if (sc.nextBoolean() == true) {
+            counter++;
+        }
 
-        System.out.println("Do you want an Desert Menu?");
+        System.out.println("Do you want an Desert Menu? True/False");
         menu.setDesert(sc.nextBoolean());
+        if (sc.nextBoolean() == true) {
+            counter++;
+        }
+
+        switch (counter) {
+            case 1:
+                adultRate = 80.00;
+                childRate = 40.00;
+                break;
+            case 2:
+                adultRate = 90.00;
+                childRate = 50.00;
+                break;
+            case 3:
+                adultRate = 100.00;
+                childRate = 60.00;
+                break;
+            case 4:
+                adultRate = 110.00;
+                childRate = 70.00;
+                break;
+            case 5:
+                adultRate = 120.00;
+                childRate = 80.00;
+                break;
         
+            default:
+                adultRate = 80.00;
+                childRate = 40.00;
+                break;
+        }
+
+        double totalCost = eventRate + (adultNum * adultRate) + (childNum * childRate);
+        
+        if (confirmedEarly == true) {
+            totalCost = totalCost * 0.50;
+        }
+        if (adultNum + childNum > 40) {
+            totalCost = totalCost * 0.15;
+        }
+
+        Event event = new Event();
+        event.setTotalCost(totalCost);
     }
 }
