@@ -55,12 +55,39 @@ public class BaptismEvent extends EventType{
 
     @Override
     public void eventTotal(int adultNum, int childNum, boolean confirmedEarly) {
-        //add Menu Selection
         eventRate = 1000.00;
         adultRate = 0.00;
         childRate = 0.00;
 
-        
+        Menu menu = new Menu();
+
+        Random random = new Random();
+
+        char char1 = (char) ('a' + random.nextInt(26));
+        char char2 = (char) ('a' + random.nextInt(26));
+
+        int random_int1 = random.nextInt(9);
+        int random_int2 = random.nextInt(9);
+        int random_int3 = random.nextInt(9);
+
+       //Getting input and setting values
+        String eventID = new StringBuilder().append("me" + char1 + char2 + random_int1 + random_int2 + random_int3).toString();
+        menu.setMenuID(eventID);
+
+        System.out.println("Do you want an Adult Menu?");
+        menu.setAdult(sc.nextBoolean());
+
+        System.out.println("Do you want an Kids Menu?");
+        menu.setKids(sc.nextBoolean());
+
+        System.out.println("Do you want an Warm Drinks Menu?");
+        menu.setWarmsDrinks(sc.nextBoolean());
+
+        System.out.println("Do you want an Cold Drinks Menu?");
+        menu.setColdDrinks(sc.nextBoolean());
+
+        System.out.println("Do you want an Desert Menu?");
+        menu.setDesert(sc.nextBoolean());
     }
     
 }
