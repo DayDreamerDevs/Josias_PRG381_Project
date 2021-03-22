@@ -70,7 +70,7 @@ public class DataHandler {
                 writer.write(writeString);
                 break;
             case 2:
-                sourceFile = "owner.txt";
+                sourceFile = "menu.txt";
                 writer = new BufferedWriter(new FileWriter(new File(sourceFile)));
                 writer.write(writeString);
                 break;
