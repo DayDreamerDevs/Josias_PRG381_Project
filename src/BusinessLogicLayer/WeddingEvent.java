@@ -48,6 +48,8 @@ public class WeddingEvent extends EventType{
 
         System.out.println("What is the Confirmed Date and Time of the Event?");
         event.setConfirmedDateTime(sc.nextLine());
+
+        eventTotal(event.getAdultNum(), event.getChildNum(), event.isConfirmedAns());
     }
 
     @Override
