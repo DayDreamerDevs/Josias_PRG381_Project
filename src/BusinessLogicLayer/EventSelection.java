@@ -19,6 +19,7 @@ public class EventSelection {
                 break;
         
             default:
+                System.out.printf("%s \n Is not a Valid. Please select a valid Option", typeOfEvent);
                 break;
         }
         return eventType;
