@@ -9,8 +9,22 @@ public class BaptismEvent extends EventType{
     public void getEventDetails() {
         //generate eventID
         //eventType and ClientID must be given too method
-        Event event = new Event();
+        //make constructor differences for totalCost
 
+        Event event = new Event();
+        //EventID generation
+        Random random = new Random();
+
+        char a = (char) ('a' + random.nextInt(26));
+        char b = (char) ('a' + random.nextInt(26));
+
+        int random_int1 = random.nextInt(9);
+        int random_int2 = random.nextInt(9);
+        int random_int3 = random.nextInt(9);
+
+        String eventID = new StringBuilder().append(a + b + random_int1 + random_int2 + random_int3).toString();
+        event.setEventID(eventID);
+        //Getting input and setting values
         System.out.println("What is the Event Date and Time of the Event?");
         event.setDateTime(sc.nextLine());
         
