@@ -1,5 +1,8 @@
 package BusinessLogicLayer;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User {
     //Attributes
     private String clientID;
@@ -86,6 +89,11 @@ public class User {
         this.nationalID = nationalID;
     }
     public User(String sourceLine) {
+    }
+
+    public List<User> getUser(){
+        List<User> user = (List<User>) new User();
+        return user;
     }
     
 }

@@ -1,5 +1,7 @@
 package BusinessLogicLayer;
 
+import java.util.List;
+
 public class Event {
     private String eventID;
     private String clientID;
@@ -124,5 +126,9 @@ public class Event {
         this.confirmedDateTime = confirmedDateTime;
     }
     public Event(String sourceLine) {
+    }
+    public List<Event> getUser(){
+        List<Event> user = (List<Event>) new Event();
+        return user;
     }
 }

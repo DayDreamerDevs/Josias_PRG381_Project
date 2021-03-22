@@ -1,5 +1,7 @@
 package BusinessLogicLayer;
 
+import java.util.List;
+
 public class Menu {
     private String menuID;
     private boolean adult;
@@ -55,5 +57,10 @@ public class Menu {
         this.desert = desert;
     }
     public Menu(String sourceLine) {
+    }
+
+    public List<Menu> getMenu(){
+        List<Menu> menu = (List<Menu>) new Menu();
+        return menu;
     }
 }
