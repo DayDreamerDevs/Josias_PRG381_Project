@@ -56,7 +56,7 @@ public class Register {
                 System.out.println("What is your Email address?");
                 user.setEmail(sc.nextLine());
 
-                if  ((sc.nextLine().contains("@")) || (sc.nextLine().contains(".")){
+                if  ((sc.nextLine().contains("@")) || (sc.nextLine().contains("."))){
                     email = true;
                 }
             }
