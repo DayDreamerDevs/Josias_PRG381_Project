@@ -51,11 +51,20 @@ public class Register {
                 user.setCellNumber(sc.nextLine());
             }
 
-            System.out.println("What is your Email address?");
-            user.setEmail(sc.nextLine());
+            boolean email = false;
+            while (email != true) {
+                System.out.println("What is your Email address?");
+                user.setEmail(sc.nextLine());
 
-            System.out.println("What is your National ID?");
-            user.setNationalID(sc.nextLine());
+                if  ((sc.nextLine().contains("@")) || (sc.nextLine().contains(".")){
+                    email = true;
+                }
+            }
+
+            while (sc.nextLine().length() != 12) {
+                System.out.println("What is your National ID?");
+                user.setNationalID(sc.nextLine());
+            }
         }
         
     }
