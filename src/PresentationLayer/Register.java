@@ -66,6 +66,7 @@ public class Register {
                 user.setNationalID(sc.nextLine());
             }
         }
-        
+        Login login = new Login();
+        login.loginScreen();        
     }
 }

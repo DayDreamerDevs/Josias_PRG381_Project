@@ -17,7 +17,7 @@ public class DataHandler {
         BufferedReader reader = new BufferedReader(new FileReader(new File(sourceFile)));
         List<String> clientList = new ArrayList<String>();
         List<String> eventList = new ArrayList<String>();
-        List<String> ownerList = new ArrayList<String>();
+        List<String> menuList = new ArrayList<String>();
 
         switch (index) {
             case 0:
@@ -35,12 +35,12 @@ public class DataHandler {
                 reader.close();
                 return eventList;
             case 2:
-                sourceFile = "owner.txt";
+                sourceFile = "menu.txt";
                 while ((sourceLine = reader.readLine()) != null) {
-                    ownerList.add(sourceLine);
+                    menuList.add(sourceLine);
                 }
                 reader.close();
-                return ownerList;
+                return menuList;
             default:
                 sourceFile = "event.txt";
                 while ((sourceLine = reader.readLine()) != null) {
