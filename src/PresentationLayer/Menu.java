@@ -9,8 +9,7 @@ public class Menu {
         System.out.println("1. Create an Event");
         System.out.println("2. Change an Event Menu");
         System.out.println("3. Confirm an Event");
-        System.out.println("4. Status of an Event");
-        System.out.println("5. Exit Program");
+        System.out.println("4. Exit Program");
 
         int menuSelect = sc.nextInt();
     }
