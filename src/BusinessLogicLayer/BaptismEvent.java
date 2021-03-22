@@ -7,7 +7,6 @@ public class BaptismEvent extends EventType{
 
     @Override
     public void getEventDetails() {
-        //generate eventID
         //eventType and ClientID must be given too method
         //make constructor differences for totalCost
 
@@ -23,7 +22,7 @@ public class BaptismEvent extends EventType{
         int random_int3 = random.nextInt(9);
 
        //Getting input and setting values
-        String eventID = new StringBuilder().append("b" + char1 + char2 + random_int1 + random_int2 + random_int3).toString();
+        String eventID = new StringBuilder().append("ba" + char1 + char2 + random_int1 + random_int2 + random_int3).toString();
         event.setEventID(eventID);
 
         System.out.println("What is the Event Date and Time of the Event?");
@@ -52,9 +51,6 @@ public class BaptismEvent extends EventType{
 
         System.out.println("What is the Confirmed Date and Time of the Event?");
         event.setConfirmedDateTime(sc.nextLine());
-
-        /*Owner owner = new Owner();
-        owner.setAge(30);*/
     }
 
     @Override
