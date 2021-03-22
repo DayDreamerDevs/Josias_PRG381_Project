@@ -74,8 +74,8 @@ public class Register {
         String writeString = userList.toString();
 
         DataHandler dataHandler = new DataHandler();
-        dataHandler.writeText(1, writeString);
-        
+        dataHandler.writeText(2, writeString);
+
         Login login = new Login();
         login.loginScreen();        
     }
