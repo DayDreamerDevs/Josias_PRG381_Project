@@ -26,6 +26,7 @@ public class DataHandler {
         switch (index) {
             case 0:
                 sourceFile = "client.txt";
+                reader = new BufferedReader(new FileReader(new File(sourceFile)));
                 while ((sourceLine = reader.readLine()) != null) {
                     clientList.add(new User(sourceLine));
                 }
@@ -33,6 +34,7 @@ public class DataHandler {
                 return clientList;
             case 1:
                 sourceFile = "event.txt";
+                reader = new BufferedReader(new FileReader(new File(sourceFile)));
                 while ((sourceLine = reader.readLine()) != null) {
                     eventList.add(new Event(sourceLine));
                 }
@@ -40,6 +42,7 @@ public class DataHandler {
                 return eventList;
             case 2:
                 sourceFile = "menu.txt";
+                reader = new BufferedReader(new FileReader(new File(sourceFile)));
                 while ((sourceLine = reader.readLine()) != null) {
                     menuList.add(new Menu(sourceLine));
                 }
