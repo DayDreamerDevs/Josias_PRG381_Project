@@ -66,6 +66,9 @@ public class Register {
                 user.setNationalID(sc.nextLine());
             }
         }
+        User user = new User();
+        List<User> userList = user.
+        String writeString = List<User>().toString();
         Login login = new Login();
         login.loginScreen();        
     }
