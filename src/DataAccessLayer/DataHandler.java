@@ -61,14 +61,17 @@ public class DataHandler {
         switch (index) {
             case 0:
                 sourceFile = "client.txt";
+                writer = new BufferedWriter(new FileWriter(new File(sourceFile)));
                 writer.write(writeString);
                 break;
             case 1:
                 sourceFile = "event.txt";
+                writer = new BufferedWriter(new FileWriter(new File(sourceFile)));
                 writer.write(writeString);
                 break;
             case 2:
                 sourceFile = "owner.txt";
+                writer = new BufferedWriter(new FileWriter(new File(sourceFile)));
                 writer.write(writeString);
                 break;
             default:
