@@ -1,6 +1,7 @@
 package BusinessLogicLayer;
 
 public class User {
+    //Attributes
     private String clientID;
     private String username;
     private String password;
@@ -11,6 +12,7 @@ public class User {
     private String email;
     private String nationalID;
 
+    //Properties
     public String getClientID() {
         return clientID;
     }
@@ -66,6 +68,11 @@ public class User {
         this.nationalID = nationalID;
     }
     
+    public User(){
+
+    }
+    
+    //Parameterized Constructor
     public User(String clientID, String username, String password, String firstName, String lastName, int age,
             int cellNumber, String email, String nationalID) {
         this.clientID = clientID;

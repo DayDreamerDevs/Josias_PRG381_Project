@@ -68,6 +68,10 @@ public class Owner {
         this.nationalID = nationalID;
     }
 
+    public Owner(){
+        
+    }
+
     //Parameterized Constructor
     public Owner(String ownerID, String username, String password, String firstName, String lastName, int age,
             int cellNumber, String email, String nationalID) {
