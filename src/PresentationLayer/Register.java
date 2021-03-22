@@ -1,11 +1,13 @@
 package PresentationLayer;
 
+import java.io.IOException;
 import java.util.*;
 
 import BusinessLogicLayer.User;
+import DataAccessLayer.DataHandler;
 
 public class Register {
-    public void registerScreen(){
+    public void registerScreen() throws IOException{
         Scanner sc = new Scanner(System.in);
 
         System.out.println("{-----Welcome to Delicious Catering Service-----}");
@@ -67,8 +69,13 @@ public class Register {
             }
         }
         User user = new User();
-        List<User> userList = user.
-        String writeString = List<User>().toString();
+        List<User> userList = user.getUser();
+
+        String writeString = userList.toString();
+
+        DataHandler dataHandler = new DataHandler();
+        dataHandler.writeText(1, writeString);
+        
         Login login = new Login();
         login.loginScreen();        
     }
