@@ -8,7 +8,7 @@ public class User {
     private String firstName;
     private String lastName;
     private int age;
-    private int cellNumber;
+    private String cellNumber;
     private String email;
     private String nationalID;
 
@@ -49,10 +49,10 @@ public class User {
     public void setAge(int age) {
         this.age = age;
     }
-    public int getCellNumber() {
+    public String getCellNumber() {
         return cellNumber;
     }
-    public void setCellNumber(int cellNumber) {
+    public void setCellNumber(String cellNumber) {
         this.cellNumber = cellNumber;
     }
     public String getEmail() {
@@ -71,10 +71,10 @@ public class User {
     public User(){
 
     }
-    
+
     //Parameterized Constructor
     public User(String clientID, String username, String password, String firstName, String lastName, int age,
-            int cellNumber, String email, String nationalID) {
+        String cellNumber, String email, String nationalID) {
         this.clientID = clientID;
         this.username = username;
         this.password = password;
