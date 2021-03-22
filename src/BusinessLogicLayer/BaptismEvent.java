@@ -56,6 +56,11 @@ public class BaptismEvent extends EventType{
     @Override
     public void eventTotal(int adultNum, int childNum, boolean confirmedEarly) {
         //add Menu Selection
+        eventRate = 1000.00;
+        adultRate = 0.00;
+        childRate = 0.00;
+
+        
     }
     
 }
