@@ -9,7 +9,7 @@ public class WeddingEvent extends EventType{
 
     @Override
     public void eventTotal(int adultNum, int childNum, boolean confirmedEarly) {
-        // TODO Auto-generated method stub
+        //add menu selection
         
     }
 }
